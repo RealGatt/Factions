@@ -119,7 +119,7 @@ public class TextUtil {
     }
 
     public static String parseColorAcc(String string) {
-        return string.replace("`e", "").replace("`r", ChatColor.RED.toString()).replace("`R", ChatColor.DARK_RED.toString()).replace("`y", ChatColor.YELLOW.toString()).replace("`Y", ChatColor.GOLD.toString()).replace("`g", ChatColor.GREEN.toString()).replace("`G", ChatColor.DARK_GREEN.toString()).replace("`a", ChatColor.AQUA.toString()).replace("`A", ChatColor.DARK_AQUA.toString()).replace("`b", ChatColor.BLUE.toString()).replace("`B", ChatColor.DARK_BLUE.toString()).replace("`p", ChatColor.LIGHT_PURPLE.toString()).replace("`P", ChatColor.DARK_PURPLE.toString()).replace("`k", ChatColor.BLACK.toString()).replace("`s", ChatColor.GRAY.toString()).replace("`S", ChatColor.DARK_GRAY.toString()).replace("`w", ChatColor.WHITE.toString());
+        return string.replace("`e", "").replace("`r", ChatColor.RED.toString()).replace("`R", ChatColor.DARK_RED.toString()).replace("`y", ChatColor.translateAlternateColorCodes('&', "&e").toString()).replace("`Y", ChatColor.GOLD.toString()).replace("`g", ChatColor.GREEN.toString()).replace("`G", ChatColor.DARK_GREEN.toString()).replace("`a", ChatColor.AQUA.toString()).replace("`A", ChatColor.DARK_AQUA.toString()).replace("`b", ChatColor.BLUE.toString()).replace("`B", ChatColor.DARK_BLUE.toString()).replace("`p", ChatColor.LIGHT_PURPLE.toString()).replace("`P", ChatColor.DARK_PURPLE.toString()).replace("`k", ChatColor.BLACK.toString()).replace("`s", ChatColor.GRAY.toString()).replace("`S", ChatColor.DARK_GRAY.toString()).replace("`w", ChatColor.WHITE.toString());
     }
 
     public static String parseColorTags(String string) {
@@ -173,16 +173,16 @@ public class TextUtil {
     private final static int titleizeBalance = -1;
 
     public String titleize(String str) {
-        String center = ".[ " + parseTags("<l>") + str + parseTags("<a>") + " ].";
+        String center = "." + ChatColor.GRAY + "[ " + ChatColor.RED + str + ChatColor.GRAY + " ]" + ChatColor.DARK_GRAY + ".";
         int centerlen = ChatColor.stripColor(center).length();
         int pivot = titleizeLine.length() / 2;
         int eatLeft = (centerlen / 2) - titleizeBalance;
         int eatRight = (centerlen - eatLeft) + titleizeBalance;
 
         if (eatLeft < pivot) {
-            return parseTags("<a>") + titleizeLine.substring(0, pivot - eatLeft) + center + titleizeLine.substring(pivot + eatRight);
+            return ChatColor.DARK_GRAY + titleizeLine.substring(0, pivot - eatLeft) + center + titleizeLine.substring(pivot + eatRight);
         } else {
-            return parseTags("<a>") + center;
+            return ChatColor.DARK_GRAY + center;
         }
     }
 

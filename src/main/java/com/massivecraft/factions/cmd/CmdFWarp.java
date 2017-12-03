@@ -32,7 +32,7 @@ public class CmdFWarp extends FCommand {
     public void perform() {
         //TODO: check if in combat.
         if (args.size() == 0) {
-            FancyMessage msg = new FancyMessage(TL.COMMAND_FWARP_WARPS.toString()).color(ChatColor.GOLD);
+            FancyMessage msg = new FancyMessage(TL.COMMAND_FWARP_WARPS.toString()).color(ChatColor.GRAY);
             Map<String, LazyLocation> warps = myFaction.getWarps();
             for (String s : warps.keySet()) {
                 msg.then(s + " ").tooltip(TL.COMMAND_FWARP_CLICKTOWARP.toString()).command("/" + Conf.baseCommandAliases.get(0) + " warp " + s).color(ChatColor.WHITE);

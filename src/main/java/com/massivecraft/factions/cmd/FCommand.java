@@ -56,17 +56,17 @@ public abstract class FCommand extends MCommand<P> {
     @Override
     public boolean isEnabled() {
         if (p.getLocked() && this.disableOnLock) {
-            msg("<b>Factions was locked by an admin. Please try again later.");
+            msg("<c>Factions was locked by an admin. Please try again later.");
             return false;
         }
 
         if (this.isMoneyCommand && !Conf.econEnabled) {
-            msg("<b>Faction economy features are disabled on this server.");
+            msg("<c>Faction economy features are disabled on this server.");
             return false;
         }
 
         if (this.isMoneyCommand && !Conf.bankEnabled) {
-            msg("<b>The faction bank system is disabled on this server.");
+            msg("<c>The faction bank system is disabled on this server.");
             return false;
         }
 
@@ -89,17 +89,17 @@ public abstract class FCommand extends MCommand<P> {
         }
 
         if (!fme.hasFaction()) {
-            sender.sendMessage(p.txt.parse("<b>You are not member of any faction."));
+            sender.sendMessage(p.txt.parse("<c>You are not member of any faction."));
             return false;
         }
 
         if (this.senderMustBeModerator && !fme.getRole().isAtLeast(Role.MODERATOR)) {
-            sender.sendMessage(p.txt.parse("<b>Only faction moderators can %s.", this.getHelpShort()));
+            sender.sendMessage(p.txt.parse("<c>Only faction moderators can %s.", this.getHelpShort()));
             return false;
         }
 
         if (this.senderMustBeAdmin && !fme.getRole().isAtLeast(Role.ADMIN)) {
-            sender.sendMessage(p.txt.parse("<b>Only faction admins can %s.", this.getHelpShort()));
+            sender.sendMessage(p.txt.parse("<c>Only faction admins can %s.", this.getHelpShort()));
             return false;
         }
 
@@ -128,7 +128,7 @@ public abstract class FCommand extends MCommand<P> {
         }
 
         if (fme.getRole().value < role.value) {
-            msg("<b>You <h>must be " + role + "<b> to " + this.getHelpShort() + ".");
+            msg("<c>You <h>must be " + role + "<c> to " + this.getHelpShort() + ".");
             return false;
         }
         return true;
@@ -152,7 +152,7 @@ public abstract class FCommand extends MCommand<P> {
         }
 
         if (msg && ret == null) {
-            this.msg("<b>No player \"<p>%s<b>\" could be found.", name);
+            this.msg("<c>No player \"<p>%s<c>\" could be found.", name);
         }
 
         return ret;
@@ -225,7 +225,7 @@ public abstract class FCommand extends MCommand<P> {
         }
 
         if (msg && ret == null) {
-            this.msg("<b>The faction or player \"<p>%s<b>\" could not be found.", name);
+            this.msg("<c>The faction or player \"<p>%s<c>\" could not be found.", name);
         }
 
         return ret;
@@ -249,7 +249,7 @@ public abstract class FCommand extends MCommand<P> {
 
     public boolean canIAdministerYou(FPlayer i, FPlayer you) {
         if (!i.getFaction().equals(you.getFaction())) {
-            i.sendMessage(p.txt.parse("%s <b>is not in the same faction as you.", you.describeTo(i, true)));
+            i.sendMessage(p.txt.parse("%s <c>is not in the same faction as you.", you.describeTo(i, true)));
             return false;
         }
 
@@ -258,15 +258,15 @@ public abstract class FCommand extends MCommand<P> {
         }
 
         if (you.getRole().equals(Role.ADMIN)) {
-            i.sendMessage(p.txt.parse("<b>Only the faction admin can do that."));
+            i.sendMessage(p.txt.parse("<c>Only the faction admin can do that."));
         } else if (i.getRole().equals(Role.MODERATOR)) {
             if (i == you) {
                 return true; //Moderators can control themselves
             } else {
-                i.sendMessage(p.txt.parse("<b>Moderators can't control each other..."));
+                i.sendMessage(p.txt.parse("<c>Moderators can't control each other..."));
             }
         } else {
-            i.sendMessage(p.txt.parse("<b>You must be a faction moderator to do that."));
+            i.sendMessage(p.txt.parse("<c>You must be a faction moderator to do that."));
         }
 
         return false;

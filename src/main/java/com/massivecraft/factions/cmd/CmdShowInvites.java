@@ -21,7 +21,7 @@ public class CmdShowInvites extends FCommand {
 
     @Override
     public void perform() {
-        FancyMessage msg = new FancyMessage(TL.COMMAND_SHOWINVITES_PENDING.toString()).color(ChatColor.GOLD);
+        FancyMessage msg = new FancyMessage(TL.COMMAND_SHOWINVITES_PENDING.toString()).color(ChatColor.GRAY);
         for (String id : myFaction.getInvites()) {
             FPlayer fp = FPlayers.getInstance().getById(id);
             String name = fp != null ? fp.getName() : id;

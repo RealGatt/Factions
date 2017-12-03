@@ -20,8 +20,8 @@ root:
 COMMAND:
   ADMIN:
     NOTMEMBER: '%s<i>は党派の員になっていませんよ・'
-    NOTADMIN: <b>アドミンではありません・
-    TARGETSELF: <b>自分はターゲットになれません・
+    NOTADMIN: <c>アドミンではありません・
+    TARGETSELF: <c>自分はターゲットになれません・
     DEMOTES: <i>党派アドミンから%sをデモートしました・<i>
     DEMOTED: <i>党派アドミンから%sはデモートしました・<i>.
     PROMOTES: <i>党派アドミンに%s<i>をプロモートしました
@@ -29,12 +29,12 @@ COMMAND:
   AUTOCLAIM:
     ENABLED: <h>%s<i>為にオート引取っています・
     DISABLED: <i>オート引取っていません・
-    REQUIREDRANK: <h>%s<b>になりません・
-    OTHERFACTION: <h>%s為に引取れません・<b>.
+    REQUIREDRANK: <h>%s<c>になりません・
+    OTHERFACTION: <h>%s為に引取れません・<c>.
   AUTOHELP:
     HELPFOR: ヘルプ・コマンド"
   BOOM:
-    PEACEFULONLY: <b>安らかじゃない党派は爆発トグルが禁止です・
+    PEACEFULONLY: <c>安らかじゃない党派は爆発トグルが禁止です・
     TOTOGGLE: 爆発トグルし
     FORTOGGLE: 爆発トグルした
     ENABLED: '%s<i> は爆発を%sしました'
@@ -44,8 +44,8 @@ COMMAND:
     DISABLE: <i>アドミンバイパスモードで出た
     DISABLELOG: はアドミンバイパスモードで出た
   CHAT:
-    DISABLED: <b>党派チャットは禁止されました・
-    INVALIDMODE: <b>不正なチャットモード・<i>a,fかpと入力して下さい・
+    DISABLED: <c>党派チャットは禁止されました・
+    INVALIDMODE: <c>不正なチャットモード・<i>a,fかpと入力して下さい・
     MODE:
       PUBLIC: <i>只公開チャットモード
       ALLIANCE: <i>只連盟チャットモード
@@ -56,10 +56,10 @@ COMMAND:
     DISABLE: <i>チャットスパイモードで出た
     DISABLELOG: はチャットスパイモードで出た
   CLAIM:
-    INVALIDRADIUS: <b>半径を指定しますなら１以上を指定して下さい・
-    DENIED: <b>半径で引き取る許可がありません・
+    INVALIDRADIUS: <c>半径を指定しますなら１以上を指定して下さい・
+    DENIED: <c>半径で引き取る許可がありません・
   CONFIG:
-    NOEXIST: <b>設定オプション"<h>%s<b>"はありません・
+    NOEXIST: <c>設定オプション"<h>%s<c>"はありません・
     SET:
       'TRUE': '"オプションは正に変わりました'
       'FALSE': '"オプションは正じゃなくに変わりました'
@@ -85,11 +85,11 @@ COMMAND:
       MATCHING: Configuration setting "%s" couldn't be matched, though it should be... please report this error.
       TYPE: '''%s'' is of type ''%s'', which cannot be modified with this command.'
   CREATE:
-    MUSTLEAVE: <b>You must leave your current faction first.
-    INUSE: <b>That tag is already in use.
+    MUSTLEAVE: <c>You must leave your current faction first.
+    INUSE: <c>That tag is already in use.
     TOCREATE: to create a new faction
     FORCREATE: for creating a new faction
-    ERROR: <b>There was an internal error while trying to create your faction. Please try again.
+    ERROR: <c>There was an internal error while trying to create your faction. Please try again.
     CREATED: %s<i> created a new faction %s
     CREATEDLOG: ' は新しい党派を造りました: '
     YOUSHOULD: '<i>You should now: %s'
@@ -126,7 +126,7 @@ COMMAND:
     FORWARPING: ワープした
     WARPS: 'ワープリスト: '
   HELP:
-    '404': <b>指定ページは不正です・
+    '404': <c>指定ページは不正です・
     NEXTCREATE: <i>Learn how to create a faction on the next page.
     HOME: '<i>And don''t forget to set your home:'
     BANK:
@@ -171,12 +171,12 @@ COMMAND:
       '2': '<i>More commands for server admins:'
       '3': '<i>Even more commands for server admins:'
   HOME:
-    DISABLED: <b>党派ホームは禁止されました・
-    TELEPORTDISABLED: <b>党派ホームテレポートは禁止されました・
-    NOHOME: '<b>党派のホームはありません'
-    INENEMY: <b>You cannot teleport to your faction home while in the territory of an enemy faction.
-    WRONGWORLD: <b>You cannot teleport to your faction home while in a different world.
-    ENEMYNEAR: <b>You cannot teleport to your faction home while an enemy is within %s blocks of you.
+    DISABLED: <c>党派ホームは禁止されました・
+    TELEPORTDISABLED: <c>党派ホームテレポートは禁止されました・
+    NOHOME: '<c>党派のホームはありません'
+    INENEMY: <c>You cannot teleport to your faction home while in the territory of an enemy faction.
+    WRONGWORLD: <c>You cannot teleport to your faction home while in a different world.
+    ENEMYNEAR: <c>You cannot teleport to your faction home while an enemy is within %s blocks of you.
     TOTELEPORT: to teleport to your faction home
     FORTELEPORT: for teleporting to your faction home
   INVITE:
@@ -187,13 +187,13 @@ COMMAND:
     INVITED: '%s<i> invited %s<i> to your faction.'
     ALREADYMEMBER: '%s<i> is already a member of %s'
   JOIN:
-    CANNOTFORCE: <b>You do not have permission to move other players into a faction.
-    SYSTEMFACTION: <b>Players may only join normal factions. This is a system faction.
-    ALREADYMEMBER: <b>%s %s already a member of %s
-    ATLIMIT: ' <b>!<white> The faction %s is at the limit of %d members, so %s cannot
+    CANNOTFORCE: <c>You do not have permission to move other players into a faction.
+    SYSTEMFACTION: <c>Players may only join normal factions. This is a system faction.
+    ALREADYMEMBER: <c>%s %s already a member of %s
+    ATLIMIT: ' <c>!<white> The faction %s is at the limit of %d members, so %s cannot
       currently join.'
-    INOTHERFACTION: <b>%s must leave %s current faction first.
-    NEGATIVEPOWER: <b>%s cannot join a faction with a negative power level.
+    INOTHERFACTION: <c>%s must leave %s current faction first.
+    NEGATIVEPOWER: <c>%s cannot join a faction with a negative power level.
     REQUIRESINVITATION: <i>This faction requires invitation.
     ATTEMPTEDJOIN: '%s<i> tried to join your faction.'
     TOJOIN: to join a faction
@@ -206,11 +206,11 @@ COMMAND:
   KICK:
     CANDIDATES: 'Players you can kick: '
     CLICKTOKICK: 'Click to kick '
-    SELF: <b>You cannot kick yourself.
+    SELF: <c>You cannot kick yourself.
     NONE: That player is not in a faction.
-    NOTMEMBER: '%s<b> is not a member of %s'
-    INSUFFICIENTRANK: <b>Your rank is too low to kick this player.
-    NEGATIVEPOWER: <b>You cannot kick that member until their power is positive.
+    NOTMEMBER: '%s<c> is not a member of %s'
+    INSUFFICIENTRANK: <c>Your rank is too low to kick this player.
+    NEGATIVEPOWER: <c>You cannot kick that member until their power is positive.
     TOKICK: to kick someone from the faction
     FORKICK: for kicking someone from the faction
     FACTION: '%s<i> kicked %s<i> from the faction! :O'
@@ -233,10 +233,10 @@ COMMAND:
   MOD:
     CANDIDATES: 'Players you can promote: '
     CLICKTOPROMOTE: 'Click to promote '
-    NOTMEMBER: '%s<b> is not a member in your faction.'
-    NOTADMIN: <b>You are not the faction admin.
-    SELF: <b>The target player musn't be yourself.
-    TARGETISADMIN: <b>The target player is a faction admin. Demote them first.
+    NOTMEMBER: '%s<c> is not a member in your faction.'
+    NOTADMIN: <c>You are not the faction admin.
+    SELF: <c>The target player musn't be yourself.
+    TARGETISADMIN: <c>The target player is a faction admin. Demote them first.
     REVOKES: <i>You have removed moderator status from %s<i>.
     REVOKED: '%s<i> is no longer moderator in your faction.'
     PROMOTES: '%s<i> was promoted to moderator in your faction.'
@@ -271,10 +271,10 @@ COMMAND:
     CHANGES: '%s<i> changed the faction to <h>%s<i>.'
     CHANGED: <i>The faction %s<i> is now %s
   OWNER:
-    DISABLED: <b>Sorry, but owned areas are disabled on this server.
-    LIMIT: <b>Sorry, but you have reached the server's <h>limit of %d <b>owned areas per faction.
-    WRONGFACTION: <b>This land is not claimed by your faction, so you can't set ownership of it.
-    NOTCLAIMED: <b>This land is not claimed by a faction. Ownership is not possible.
+    DISABLED: <c>Sorry, but owned areas are disabled on this server.
+    LIMIT: <c>Sorry, but you have reached the server's <h>limit of %d <c>owned areas per faction.
+    WRONGFACTION: <c>This land is not claimed by your faction, so you can't set ownership of it.
+    NOTCLAIMED: <c>This land is not claimed by a faction. Ownership is not possible.
     NOTMEMBER: '%s<i> is not a member of this faction.'
     CLEARED: <i>You have cleared ownership for this claimed area.
     REMOVED: <i>You have removed ownership of this claimed land from %s<i>.
@@ -282,8 +282,8 @@ COMMAND:
     FORSET: for setting ownership of claimed land
     ADDED: <i>You have added %s<i> to the owner list for this claimed land.
   OWNERLIST:
-    DISABLED: <b>Sorry, but owned areas are disabled on this server.
-    WRONGFACTION: <b>This land is not claimed by your faction.
+    DISABLED: <c>Sorry, but owned areas are disabled on this server.
+    WRONGFACTION: <c>This land is not claimed by your faction.
     NOTCLAIMED: <i>This land is not claimed by any faction, thus no owners.
     NONE: <i>No owners are set here; everyone in the faction has access.
     OWNERS: '<i>Current owner(s) of this land: %s'
@@ -295,9 +295,9 @@ COMMAND:
     PENALTY: ' (penalty: '
   POWERBOOST:
     HELP:
-      '1': <b>You must specify "p" or "player" to target a player or "f" or "faction" to target a faction.
-      '2': <b>ex. /f powerboost p SomePlayer 0.5  -or-  /f powerboost f SomeFaction -5
-    INVALIDNUM: <b>You must specify a valid numeric value for the power bonus/penalty amount.
+      '1': <c>You must specify "p" or "player" to target a player or "f" or "faction" to target a faction.
+      '2': <c>ex. /f powerboost p SomePlayer 0.5  -or-  /f powerboost f SomeFaction -5
+    INVALIDNUM: <c>You must specify a valid numeric value for the power bonus/penalty amount.
     PLAYER: Player "%s"
     FACTION: Faction "%s"
     BOOST: <i>%s now has a power bonus/penalty of %d to min and max power levels.
@@ -316,12 +316,12 @@ COMMAND:
     TOSET: to set warp
     FORSET: for setting warp
   SETHOME:
-    DISABLED: <b>党派ホームは禁止されました・
-    NOTCLAIMED: <b>Sorry, your faction home can only be set inside your own claimed territory.
+    DISABLED: <c>党派ホームは禁止されました・
+    NOTCLAIMED: <c>Sorry, your faction home can only be set inside your own claimed territory.
     TOSET: to set the faction home
     FORSET: for setting the faction home
     SET: '%s<i> set the home for your faction. You can now use:'
-    SETOTHER: <b>You have set the home for the %s<i> faction.
+    SETOTHER: <c>You have set the home for the %s<i> faction.
   SHOW:
     TOSHOW: to show faction information
     FORSHOW: for showing faction information
@@ -349,7 +349,7 @@ COMMAND:
     ONLINE: オンライン
     AGOSUFFIX: '間・'
   TAG:
-    TAKEN: <b>That tag is already taken
+    TAKEN: <c>That tag is already taken
     TOCHANGE: to change the faction tag
     FORCHANGE: for changing the faction tag
     FACTION: '%s<i> changed your faction tag to %s'
@@ -361,14 +361,14 @@ COMMAND:
   UNCLAIM:
     SAFEZONE:
       SUCCESS: <i>この安全地帯は原に変わりました・
-      NOPERM: <b>This is a safe zone. You lack permissions to unclaim.
+      NOPERM: <c>This is a safe zone. You lack permissions to unclaim.
     WARZONE:
       SUCCESS: <i>この戦場は原に変わりました・
-      NOPERM: <b>This is a war zone. You lack permissions to unclaim.
+      NOPERM: <c>This is a war zone. You lack permissions to unclaim.
     UNCLAIMED: '%s<i> unclaimed some of your land.'
     UNCLAIMS: <i>You unclaimed this land.
     LOG: '%s unclaimed land at (%s) from the faction: %s'
-    WRONGFACTION: <b>You don't own this land.
+    WRONGFACTION: <c>You don't own this land.
     TOUNCLAIM: to unclaim this land
     FORUNCLAIM: for unclaiming this land
     FACTIONUNCLAIMED: '%s<i> unclaimed some land.'
@@ -384,9 +384,9 @@ COMMAND:
     SUCCESS: <i>You unclaimed ALL war zone land.
     LOG: '%s unclaimed all war zones.'
   RELATIONS:
-    ALLTHENOPE: <b>いいえ！出来ません・
-    MORENOPE: <b>いいえ・自分は自分には関係出来ません・
-    ALREADYINRELATIONSHIP: <b> %sの関係はもうありますよ・
+    ALLTHENOPE: <c>いいえ！出来ません・
+    MORENOPE: <c>いいえ・自分は自分には関係出来ません・
+    ALREADYINRELATIONSHIP: <c> %sの関係はもうありますよ・
     TOMARRY: 関係は変わり
     FORMARRY: 関係は変わった
     MUTUAL: <i>Your faction is now %s<i> to %s
@@ -423,12 +423,12 @@ RELATION:
 NOPAGES: <i>申し訳ありません・ページはありません・
 INVALIDPAGE: <i>指定ページは不正です・1から%dまで・
 
-title: '&b党派 &0|&r'
-wilderness: '&2原'
+title: '&c党派 &0|&r'
+wilderness: '&c原'
 wilderness-description: ' '
 warzone: '&4戦場'
 warzone-description: 安全じゃない地帯
-safezone: '&6安全地帯'
+safezone: '&7安全地帯'
 safezone-description: プレーヤコンバットとモンスターはありません・
 toggle-sb: 今、スコアーボードは{value}になっています・
 default-prefix: '{relationcolor}[{faction}] &r'

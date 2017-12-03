@@ -5,6 +5,7 @@ import com.massivecraft.factions.P;
 import com.massivecraft.factions.integration.Econ;
 import com.massivecraft.factions.struct.Permission;
 import com.massivecraft.factions.zcore.util.TL;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.ArrayList;
@@ -188,7 +189,7 @@ public class CmdHelp extends FCommand {
         pageLines.add(p.cmdBase.cmdSafeunclaimall.getUseageTemplate(true));
         pageLines.add(p.cmdBase.cmdWarunclaimall.getUseageTemplate(true));
         //TODO:TL
-        pageLines.add(p.txt.parse("<i>Note: " + p.cmdBase.cmdUnclaim.getUseageTemplate(false) + P.p.txt.parse("<i>") + " works on safe/war zones as well."));
+        pageLines.add(p.txt.parse(ChatColor.GRAY + "Note: " + p.cmdBase.cmdUnclaim.getUseageTemplate(false) + ChatColor.GRAY  + " works on safe/war zones as well."));
         pageLines.add(p.cmdBase.cmdPeaceful.getUseageTemplate(true));
         helpPages.add(pageLines);
 

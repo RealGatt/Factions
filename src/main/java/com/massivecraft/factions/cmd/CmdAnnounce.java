@@ -27,7 +27,7 @@ public class CmdAnnounce extends FCommand {
 
     @Override
     public void perform() {
-        String prefix = ChatColor.GREEN + myFaction.getTag() + ChatColor.YELLOW + " [" + ChatColor.GRAY + me.getName() + ChatColor.YELLOW + "] " + ChatColor.RESET;
+        String prefix = ChatColor.GREEN + myFaction.getTag() + ChatColor.translateAlternateColorCodes('&', "&e") + " [" + ChatColor.GRAY + me.getName() + ChatColor.translateAlternateColorCodes('&', "&e") + "] " + ChatColor.RESET;
         String message = StringUtils.join(args, " ");
 
         for (Player player : myFaction.getOnlinePlayers()) {

@@ -148,7 +148,7 @@ public enum TagReplacer {
                     return !fac.isWilderness() ? fac.getTag(fp) : TL.GENERIC_FACTIONLESS.toString();
                 case LAST_SEEN:
                     String humanized = DurationFormatUtils.formatDurationWords(System.currentTimeMillis() - fp.getLastLoginTime(), true, true) + TL.COMMAND_STATUS_AGOSUFFIX;
-                    return fp.isOnline() ? ChatColor.GREEN + TL.COMMAND_STATUS_ONLINE.toString() : (System.currentTimeMillis() - fp.getLastLoginTime() < 432000000 ? ChatColor.YELLOW + humanized : ChatColor.RED + humanized);
+                    return fp.isOnline() ? ChatColor.GREEN + TL.COMMAND_STATUS_ONLINE.toString() : (System.currentTimeMillis() - fp.getLastLoginTime() < 432000000 ? ChatColor.translateAlternateColorCodes('&', "&e") + humanized : ChatColor.RED + humanized);
                 case PLAYER_GROUP:
                     return P.p.getPrimaryGroup(Bukkit.getOfflinePlayer(UUID.fromString(fp.getId())));
                 case PLAYER_BALANCE:

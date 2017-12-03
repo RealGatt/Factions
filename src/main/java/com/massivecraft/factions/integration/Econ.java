@@ -176,7 +176,7 @@ public class Econ {
         if (!econ.has(fromAcc, amount)) {
             // There was not enough money to pay
             if (invoker != null && notify) {
-                invoker.msg("<h>%s<b> can't afford to transfer <h>%s<b> to %s<b>.", from.describeTo(invoker, true), moneyString(amount), to.describeTo(invoker));
+                invoker.msg("<h>%s<c> can't afford to transfer <h>%s<c> to %s<c>.", from.describeTo(invoker, true), moneyString(amount), to.describeTo(invoker));
             }
 
             return false;
@@ -200,7 +200,7 @@ public class Econ {
 
         // if we get here something with the transaction failed
         if (notify) {
-            invoker.msg("Unable to transfer %s<b> to <h>%s<b> from <h>%s<b>.", moneyString(amount), to.describeTo(invoker), from.describeTo(invoker, true));
+            invoker.msg("Unable to transfer %s<c> to <h>%s<c> from <h>%s<c>.", moneyString(amount), to.describeTo(invoker), from.describeTo(invoker, true));
         }
 
         return false;

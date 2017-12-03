@@ -21,7 +21,7 @@ public class CmdList extends FCommand {
         this.aliases.add("ls");
 
         // default values in case user has old config
-        defaults[0] = "&e&m----------&r&e[ &2Faction List &9{pagenumber}&e/&9{pagecount} &e]&m----------";
+        defaults[0] = "&7&m----------&r&7[ &cFaction List &9{pagenumber}&7/&9{pagecount} &7]&m----------";
         defaults[1] = "<i>Factionless<i> {factionless} online";
         defaults[2] = "<a>{faction} <i>{online} / {members} online, <a>Land / Power / Maxpower: <i>{chunks}/{power}/{maxPower}";
 

@@ -200,7 +200,7 @@ public abstract class MCommand<T extends MPlugin> {
 
     public String getUseageTemplate(List<MCommand<?>> commandChain, boolean addShortHelp) {
         StringBuilder ret = new StringBuilder();
-        ret.append(p.txt.parseTags("<c>"));
+        ret.append(p.txt.parseTags(ChatColor.RED.toString()));
         ret.append('/');
 
         for (MCommand<?> mc : commandChain) {
@@ -227,12 +227,12 @@ public abstract class MCommand<T extends MPlugin> {
         }
 
         if (args.size() > 0) {
-            ret.append(p.txt.parseTags("<p> "));
+            ret.append(p.txt.parseTags(" " +ChatColor.DARK_RED.toString()));
             ret.append(TextUtil.implode(args, " "));
         }
 
         if (addShortHelp) {
-            ret.append(p.txt.parseTags(" <i>"));
+            ret.append(p.txt.parseTags(" " + ChatColor.GRAY.toString()));
             ret.append(this.getHelpShort());
         }
 
@@ -302,7 +302,7 @@ public abstract class MCommand<T extends MPlugin> {
         }
         if (s.contains("{lastSeen}")) {
             String humanized = DurationFormatUtils.formatDurationWords(System.currentTimeMillis() - player.getLastLoginTime(), true, true) + " ago";
-            String lastSeen = player.isOnline() ? ChatColor.GREEN + "Online" : (System.currentTimeMillis() - player.getLastLoginTime() < 432000000 ? ChatColor.YELLOW + humanized : ChatColor.RED + humanized);
+            String lastSeen = player.isOnline() ? ChatColor.GREEN + "Online" : (System.currentTimeMillis() - player.getLastLoginTime() < 432000000 ? ChatColor.translateAlternateColorCodes('&', "&e") + humanized : ChatColor.RED + humanized);
             s = s.replace("{lastSeen}", lastSeen);
         }
         if (s.contains("{power}")) {

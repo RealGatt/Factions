@@ -34,7 +34,7 @@ public class CmdSetMaxVaults extends FCommand {
         }
 
         if(targetFaction == null) {
-            sender.sendMessage(ChatColor.RED + "Couldn't find Faction: " + ChatColor.YELLOW + argAsString(0));
+            sender.sendMessage(ChatColor.RED + "Couldn't find Faction: " + ChatColor.translateAlternateColorCodes('&', "&e") + argAsString(0));
             return;
         }
 

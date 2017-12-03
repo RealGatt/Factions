@@ -234,7 +234,7 @@ public abstract class MemoryFaction implements Faction, EconomyParticipator {
             return;
         }
 
-        msg("<b>Your faction home has been un-set since it is no longer in your territory.");
+        msg("<c>Your faction home has been un-set since it is no longer in your territory.");
         this.home = null;
     }
 

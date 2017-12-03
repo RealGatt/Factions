@@ -31,7 +31,7 @@ public class CmdDeinvite extends FCommand {
     public void perform() {
         FPlayer you = this.argAsBestFPlayerMatch(0);
         if (you == null) {
-            FancyMessage msg = new FancyMessage(TL.COMMAND_DEINVITE_CANDEINVITE.toString()).color(ChatColor.GOLD);
+            FancyMessage msg = new FancyMessage(TL.COMMAND_DEINVITE_CANDEINVITE.toString()).color(ChatColor.GRAY);
             for (String id : myFaction.getInvites()) {
                 FPlayer fp = FPlayers.getInstance().getById(id);
                 String name = fp != null ? fp.getName() : id;

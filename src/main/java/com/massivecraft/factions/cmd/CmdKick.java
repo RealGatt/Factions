@@ -34,7 +34,7 @@ public class CmdKick extends FCommand {
     public void perform() {
         FPlayer toKick = this.argIsSet(0) ? this.argAsBestFPlayerMatch(0) : null;
         if (toKick == null) {
-            FancyMessage msg = new FancyMessage(TL.COMMAND_KICK_CANDIDATES.toString()).color(ChatColor.GOLD);
+            FancyMessage msg = new FancyMessage(TL.COMMAND_KICK_CANDIDATES.toString()).color(ChatColor.GRAY);
             for (FPlayer player : myFaction.getFPlayersWhereRole(Role.NORMAL)) {
                 String s = player.getName();
                 msg.then(s + " ").color(ChatColor.WHITE).tooltip(TL.COMMAND_KICK_CLICKTOKICK.toString() + s).command("/" + Conf.baseCommandAliases.get(0) + " kick " + s);
