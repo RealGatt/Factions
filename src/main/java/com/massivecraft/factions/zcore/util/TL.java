@@ -464,6 +464,7 @@ public enum TL {
     COMMAND_SHOW_COMMANDDESCRIPTION("Show faction information"),
     COMMAND_SHOW_DEATHS_TIL_RAIDABLE("&7DTR: %1$d"),
     COMMAND_SHOW_EXEMPT("&cThis faction is exempt and cannot be seen."),
+    COMMAND_SHOW_CHUNK("&cVisually displays if a Chunk has been claimed ot not."),
 
     COMMAND_SHOWINVITES_PENDING("Players with pending invites: "),
     COMMAND_SHOWINVITES_CLICKTOREVOKE("Click to revoke invite for %1$s"),

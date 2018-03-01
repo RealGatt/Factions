@@ -65,7 +65,7 @@ public class CmdSeeChunk extends FCommand {
 
     @Override
     public TL getUsageTranslation() {
-        return TL.GENERIC_PLACEHOLDER;
+        return TL.COMMAND_SHOW_CHUNK;
     }
 
 }
